@@ -1,0 +1,101 @@
+.home-menu {
+  .container {
+    background: linear-gradient(to top, #0c0c0c, #2e2d2d);
+    .header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background-color: transparent;
+      z-index: 999;
+      transition: 0.4s;
+      &.active {
+        .header-menu {
+          .menu-left {
+            button {
+              color: #ffae0c;
+              i {
+                color: #ffae0c;
+              }
+            }
+          }
+        }
+      }
+      .header-menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 90px;
+        .menu-left {
+          &:hover button,
+          &:hover i {
+            color: #fff;
+          }
+          &.closed {
+            background-color: red;
+          }
+          button {
+            background-color: transparent;
+            color: #6d6d6d;
+            border: none;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: 0.4s color;
+            mix-blend-mode: difference;
+            i {
+              transform: rotate(0);
+              color: #6d6d6d;
+              font-size: 30px;
+              margin-right: 20px;
+              transition: color 0.4s;
+            }
+          }
+        }
+        .menu-right {
+          .header-logo {
+            text-align: center;
+            padding: 30px;
+            img {
+              width: 80px;
+              height: 80px;
+            }
+            p {
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+    .list {
+      height: 100%;
+      padding-top: 162px;
+      .title {
+        color: #fff;
+        font-size: 48px;
+        font-weight: 600;
+        padding-top: 50px;
+        padding-left: 90px;
+      }
+
+      .list-content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 110px 60px;
+        padding: 90px;
+        //   list-style: none;
+        //   display: flex;
+        //   align-items: center;
+        //   justify-content: start;
+        //   flex-wrap: wrap;
+        .service-item:nth-child(2),
+        .service-item:nth-child(5),
+        .service-item:nth-child(8) {
+          margin-top: 100px;
+        }
+      }
+    }
+  }
+}

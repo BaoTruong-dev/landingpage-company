@@ -1,0 +1,60 @@
+{
+  "services": [
+    {
+      "id": 1,
+      "img": "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "service": "CÔNG NGHỆ",
+      "content": "Công nghệ là lĩnh vực hạt nhân của DQV GROUP với những chiến lược đầu tư sâu rộng trong lĩnh vực công nghệ cao, cung cấp những giải pháp công nghệ và chuyển đổi số, ứng dụng vào nhiều lĩnh vực khác nhau mang đến trải nghiệm phong phú, tiện ích, hiện đại cho người sử dụng.",
+      "path": "technology"
+    },
+    {
+      "id": 2,
+      "img": "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "service": "DU LỊCH - VUI CHƠI GIẢI TRÍ",
+      "content": "Với tổ hợp nhiều loại hình giải trí khác nhau bao gồm du lịch, vui chơi và nghệ thuật, DQV GROUP tự hào khi sở hữu những nguồn lực chất lượng cao, đảm bảo sự phát triển mạnh mẽ và liên tục. Trong đó có đội ngũ nhân sự chuyên nghiệp phụ trách trong từng lĩnh vực hoạt động.",
+      "path": "travel"
+    },
+    {
+      "id": 3,
+      "img": "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "service": "BẤT ĐỘNG SẢN",
+      "content": "Ở lĩnh vực bất động sản, DQV GROUP hoạt động trong lĩnh vực phát triển, chuyển nhượng và vận hành bất động sản nhà ở phức hợp thuộc nhiều phân khúc khác nhau từ cao cấp, trung cấp đến bình dân..",
+      "path": "house"
+    },
+    {
+      "id": 4,
+      "img": "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "service": "GIÁO DỤC",
+      "content": "Với những điểm khác biệt mang tính hiện đại và đột phá, DQV GROUP dẫn đầu là tập đoàn tiên phong khai phá thị trường trong lĩnh vực thương mại điện tử mới.",
+      "path": "education"
+    },
+    {
+      "id": 5,
+      "img": "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "service": "CÔNG NGHIỆP",
+      "content": "Với hoạt động ở lĩnh vực công nghiệp, DQV GROUP tự hào là một chuyên gia trong lĩnh vực âm thanh – ánh sáng tại Việt Nam. Phát triển với tầm nhìn chung là sản xuất, phân phối thiết bị, giải pháp, dịch vụ trong lĩnh vực âm thanh, ánh sáng, hình ảnh cho sân khấu chuyên nghiệp, bar – club, phát thanh truyền hình, hội thảo và studio.",
+      "path": "industry"
+    },
+    {
+      "id": 6,
+      "img": "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "service": "Y TẾ",
+      "content": "Với mục tiêu phát triển nền công nghiệp dược phẩm Việt Nam ngang tầm khu vực, DQV GROUP từng bước hình thành các đặc khu công nghiệp dược và nuôi trồng dược liệu đặc thù, ưu tiên các dự án tạo sự đột phá trong sản xuất thuốc trong nước.",
+      "path": "medical"
+    },
+    {
+      "id": 7,
+      "img": "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "service": "BÁN LẺ",
+      "content": "Hệ thống bán lẻ DQV GROUP hoạt động với mục tiêu trở thành điểm mua sắm đáng tin cậy và trải nghiệm thú vị về những sản phẩm công nghệ.",
+      "path": "sell"
+    },
+    {
+      "id": 8,
+      "img": "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "service": "THƯƠNG MẠI ĐIỆN TỬ",
+      "content": "Với những điểm khác biệt mang tính hiện đại và đột phá, DQV GROUP dẫn đầu là tập đoàn tiên phong khai phá thị trường trong lĩnh vực thương mại điện tử mới.",
+      "path": "ecommerce"
+    }
+  ]
+}
