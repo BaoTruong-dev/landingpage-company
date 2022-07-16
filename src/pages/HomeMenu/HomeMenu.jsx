@@ -21,6 +21,7 @@ export default function HomeMenu() {
 	const overlayRef = useRef();
 	const closeIconRef = useRef();
 	const closeRef = useRef();
+	const logoRef = useRef();
 	const tl = useRef();
 	// const navigate = useNavigate();
 	const redirect = (path) => {
@@ -29,21 +30,21 @@ export default function HomeMenu() {
 		}, 3000);
 	};
 	useEffect(() => {
-		tl.current = gsap.timeline().from(overlayRef.current, { duration: 1.5, opacity: 0 }).from(closeIconRef.current,
+		tl.current = gsap.timeline().from(overlayRef.current, { scaleY: 0, duration: 1.5, opacity: 0 }).from(closeIconRef.current,
 			{
 				opacity: 0, rotation: "-360", duration: 1,
 			},
-			"-=1"
-		).from(closeRef.current, { y: 20, duration: 1.5, opacity: 0, color: '#ffae0c' }, "-=1");
+			"-=.5"
+		).from(closeRef.current, { y: 20, duration: 1.5, opacity: 0, color: '#ffae0c' }, "-=.5").from(logoRef.current, { y: 20, duration: 1, opacity: 0 }, '-=1');
 		;
 	}, []);
 	const handleClosed = () => {
 		// navigate('/');
 		// console.log('click');
 		tl.current.reverse();
-		// setTimeout(() => {
-		// 	navigate('/');
-		// }, 2000);
+		setTimeout(() => {
+			navigate('/');
+		}, 3000);
 	};
 	return (
 		<>
@@ -59,13 +60,13 @@ export default function HomeMenu() {
 								</div>
 							</div>
 							<div className="menu-right">
-								<div className="header-logo">
+								<div className="header-logo" ref={logoRef}>
 									<Link
 										rel="noopener noreferrer"
 										to="/"
 										className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent"
 									>
-										<div className="img">
+										<div className="img" >
 											<img src={logo} alt="logo" />
 										</div>
 										<p>DaiQuocVietCorp</p>
