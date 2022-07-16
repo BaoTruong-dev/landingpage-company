@@ -22,11 +22,12 @@
         font-size: 16px;
         // padding: 30px;
         color: #fff;
-        overflow: hidden;
+        // overflow: hidden;
         &.active {
           p {
             color: #ffcc3e;
-            transform: translateY(40px);
+            transform: translateY(15px);
+            opacity: 0;
           }
           .img {
             transform: rotate(360deg) scale(0);
@@ -35,10 +36,11 @@
         p {
           margin-right: 10px;
           margin-bottom: 5px;
-          transition: 1s all ease-in-out;
+          transition: 0.8s all ease-in-out;
         }
         .img {
-          transition: 1s all ease-in-out;
+          transition: 0.8s all ease-in-out;
+          transform-origin: center center;
           img {
             width: 18px;
             height: 18px;

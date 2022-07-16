@@ -10,7 +10,7 @@ export default function Home(props) {
 		setIsActive(true);
 		setTimeout(() => {
 			navigate('/menu');
-		}, 500);
+		}, 600);
 	};
 	return (
 		<div className="home">

@@ -29,12 +29,12 @@ export default function HomeMenu() {
 		}, 3000);
 	};
 	useEffect(() => {
-		tl.current = gsap.timeline().from(overlayRef.current, { height: 0, duration: 1.5 }).from(closeIconRef.current,
+		tl.current = gsap.timeline().from(overlayRef.current, { duration: 1.5, opacity: 0 }).from(closeIconRef.current,
 			{
 				opacity: 0, rotation: "-360", duration: 1,
 			},
 			"-=1"
-		).from(closeRef.current, { y: 20, duration: 1, opacity: 0 }, "-=1");
+		).from(closeRef.current, { y: 20, duration: 1.5, opacity: 0, color: '#ffae0c' }, "-=1");
 		;
 	}, []);
 	const handleClosed = () => {
@@ -47,7 +47,7 @@ export default function HomeMenu() {
 	};
 	return (
 		<>
-			<div className="home-menu">
+			<div className="home-menu" >
 				<div className="container" ref={overlayRef}>
 					<div className={`header`}>
 						<div className="header-menu">
@@ -65,7 +65,9 @@ export default function HomeMenu() {
 										to="/"
 										className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent"
 									>
-										<img src={logo} alt="logo" />
+										<div className="img">
+											<img src={logo} alt="logo" />
+										</div>
 										<p>DaiQuocVietCorp</p>
 									</Link>
 								</div>
