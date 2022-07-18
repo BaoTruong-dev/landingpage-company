@@ -1,6 +1,6 @@
 import "./App.scss";
 import { Routes, Route, Router, BrowserRouter } from "react-router-dom";
-import React from "react";
+import React, { useEffect } from "react";
 import Home from "./pages/Home/Home";
 import HomeMenu from "./pages/HomeMenu/HomeMenu";
 import Ecommerce from "./pages/Ecommerce/Ecommerce";
@@ -13,7 +13,8 @@ import Education from "./pages/Education/Education";
 import Technology from "./pages/Technology/Technology";
 import { DetailTemplate } from "./templates/DetailTemplate/DetailTemplate";
 import About from "./pages/About/About";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 function App() {
 	return (
 		<BrowserRouter>

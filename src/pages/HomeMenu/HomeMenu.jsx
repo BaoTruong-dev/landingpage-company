@@ -22,35 +22,45 @@ export default function HomeMenu() {
 	const closeIconRef = useRef();
 	const closeRef = useRef();
 	const logoRef = useRef();
+	const titleRef = useRef();
 	const tl = useRef();
-	// const navigate = useNavigate();
+	const listContentRef = useRef();
+
+	// const listItemRef = useRef([]);
+	// listItemRef.current = [];
+
 	const redirect = (path) => {
-		setTimeout(() => {
-			navigate(`/detail/${path}`);
-		}, 3000);
+		navigate(`/detail/${path}`);
 	};
-	useEffect(() => {
-		tl.current = gsap.timeline().from(overlayRef.current, { scaleY: 0, duration: 1.5, opacity: 0 }).from(closeIconRef.current,
-			{
-				opacity: 0, rotation: "-360", duration: 1,
-			},
-			"-=.5"
-		).from(closeRef.current, { y: 20, duration: 1.5, opacity: 0, color: '#ffae0c' }, "-=.5").from(logoRef.current, { y: 20, duration: 1, opacity: 0 }, '-=1');
-		;
-	}, []);
 	const handleClosed = () => {
-		// navigate('/');
-		// console.log('click');
 		tl.current.reverse();
 		setTimeout(() => {
 			navigate('/');
-		}, 3000);
+		}, 2600);
 	};
+	// const addToRefs = (el) => {
+	// 	if (el && !listItemRef.current.includes(el)) {
+	// 		listItemRef.current.push(el);
+	// 	}
+	// };
+	useEffect(() => {
+
+		tl.current = gsap.timeline().from(overlayRef.current, { scaleY: 0, duration: 1.2, opacity: 0 }).from(closeIconRef.current,
+			{
+				opacity: 0, rotation: "-360", duration: 1,
+			}, "-=.5"
+		).from(closeRef.current, { y: 10, duration: .8, opacity: 0, color: '#ffae0c' }, "-=.5").from(logoRef.current, { y: 20, duration: 1, opacity: 0 }, '-=1').from(titleRef.current, { y: 20, opacity: 0, duration: 1 }, "-=.5").from(
+			listContentRef.current, .5,
+			{ y: 30, opacity: 0 },
+			"-=1"
+		);
+	}, []);
+
 	return (
 		<>
 			<div className="home-menu" >
 				<div className="container" ref={overlayRef}>
-					<div className={`header`}>
+					<div className='header'>
 						<div className="header-menu">
 							<div className={`menu-left ${isClosed}`} onClick={handleClosed}>
 								<div>
@@ -76,7 +86,7 @@ export default function HomeMenu() {
 						</div>
 					</div>
 					<div className="list">
-						<h2 className="title">Lĩnh Vực</h2>
+						<h2 className="title" ref={titleRef}>Lĩnh Vực</h2>
 						{/* <ul className="list-content">
 						<li className="item">
 							<div className="item-content">
@@ -235,9 +245,9 @@ export default function HomeMenu() {
 						</li>
 						<li className="item "></li>
 					</ul> */}
-						<div className="list-content">
-							{data.length > 0 && data?.map(e => {
-								return <ServiceItem key={e.id} content={e.content} src={e.img} name={e.service} id={e.id} onClick={() => redirect(e.path)} />;
+						<div className="list-content" ref={listContentRef}>
+							{data?.map((e, index) => {
+								return <ServiceItem type={index % 2 == 0 ? true : false} key={e.id} content={e.content} src={e.img} name={e.service} id={e.id} onClick={() => redirect(e.path)} />;
 							})}
 						</div>
 					</div>

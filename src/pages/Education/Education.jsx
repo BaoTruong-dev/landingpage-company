@@ -7,7 +7,7 @@ export default function Education() {
 	return (
 		<>
 			<div className="nav">
-			<div className="navigation">
+				<div className="navigation">
 					<Link to="/detail/house">
 						<div className="back">
 							<i class="fa fa-arrow-left"></i>
@@ -15,10 +15,10 @@ export default function Education() {
 						</div>
 					</Link>
 					<Link to="/detail/ecommerce">
-					<div className="next">
-						<p>Next</p>
-						<i class="fa fa-arrow-right"></i>
-					</div>
+						<div className="next">
+							<p>Next</p>
+							<i class="fa fa-arrow-right"></i>
+						</div>
 					</Link>
 				</div>
 

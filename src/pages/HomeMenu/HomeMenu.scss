@@ -3,7 +3,7 @@
     background: linear-gradient(to top, #0c0c0c, #2e2d2d);
     transform-origin: top;
     .header {
-      position: fixed;
+      position: sticky;
       width: 100%;
       top: 0;
       left: 0;
@@ -28,6 +28,8 @@
         align-items: center;
         padding: 0 90px;
         .menu-left {
+          background-color: transparent;
+          mix-blend-mode: difference;
           &:hover button,
           &:hover i {
             color: #fff;
@@ -72,7 +74,6 @@
     }
     .list {
       height: 100%;
-      padding-top: 162px;
       .title {
         color: #fff;
         font-size: 48px;
@@ -83,9 +84,10 @@
 
       .list-content {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
         gap: 110px 60px;
         padding: 90px;
+        // transition: 1s all ease-in;
         //   list-style: none;
         //   display: flex;
         //   align-items: center;
