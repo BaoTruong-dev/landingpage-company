@@ -1,6 +1,6 @@
 import "./App.scss";
 import { Routes, Route, Router, BrowserRouter } from "react-router-dom";
-import React from "react";
+import React,{useEffect} from "react";
 import Home from "./pages/Home/Home";
 import HomeMenu from "./pages/HomeMenu/HomeMenu";
 import Ecommerce from "./pages/Ecommerce/Ecommerce";
@@ -15,6 +15,9 @@ import { DetailTemplate } from "./templates/DetailTemplate/DetailTemplate";
 import About from "./pages/About/About";
 
 function App() {
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	  });
 	return (
 		<BrowserRouter>
 			<Routes>
