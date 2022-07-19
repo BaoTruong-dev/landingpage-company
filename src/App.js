@@ -1,21 +1,25 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.scss";
-import { Routes, Route, Router, BrowserRouter } from "react-router-dom";
+
 import React, { useEffect } from "react";
+
+import "aos/dist/aos.css";
+import About from "./pages/About/About";
+import Ecommerce from "./pages/Ecommerce/Ecommerce";
+import Education from "./pages/Education/Education";
 import Home from "./pages/Home/Home";
 import HomeMenu from "./pages/HomeMenu/HomeMenu";
-import Ecommerce from "./pages/Ecommerce/Ecommerce";
-import Travel from "./pages/Travel/Travel";
-import Sell from "./pages/Sell/Sell";
-import Medical from "./pages/Medical/Medical";
-import Industry from "./pages/Industry/Industry";
 import House from "./pages/House/House";
-import Education from "./pages/Education/Education";
+import Industry from "./pages/Industry/Industry";
+import Medical from "./pages/Medical/Medical";
+import Sell from "./pages/Sell/Sell";
 import Technology from "./pages/Technology/Technology";
+import Travel from "./pages/Travel/Travel";
 import { DetailTemplate } from "./templates/DetailTemplate/DetailTemplate";
-import About from "./pages/About/About";
-import AOS from "aos";
-import "aos/dist/aos.css";
 function App() {
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	});
 	return (
 		<BrowserRouter>
 			<Routes>

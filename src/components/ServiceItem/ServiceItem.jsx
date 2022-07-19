@@ -3,10 +3,9 @@ import './serviceItem.scss';
 import AOS from "aos";
 
 function ServiceItem({ id, name, content, src, type, ...rest }, ref) {
-    console.log(type);
     useEffect(() => {
         AOS.init();
-        AOS.refresh();
+        // AOS.refresh();
     }, []);
     return (
         <div className='service-item' {...rest} ref={ref} data-aos="fade-up" data-aos-duration={type ? 1200 : 800} data-aos-easing="ease-out-cubic" data-aos-id="super-duper">

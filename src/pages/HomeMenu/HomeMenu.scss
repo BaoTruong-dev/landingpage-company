@@ -84,20 +84,32 @@
 
       .list-content {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
         gap: 110px 60px;
         padding: 90px;
-        // transition: 1s all ease-in;
-        //   list-style: none;
-        //   display: flex;
-        //   align-items: center;
-        //   justify-content: start;
-        //   flex-wrap: wrap;
         .service-item:nth-child(2),
         .service-item:nth-child(5),
         .service-item:nth-child(8) {
           margin-top: 100px;
         }
+      }
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    .container {
+      .header {
+        .header-menu {
+          padding: 0 25px;
+        }
+      }
+      .list {
+        .title {
+          font-size: 24px;
+          padding: 0 25px;
+        }
+        // .list-content {
+        //   grid-template-columns: repeat(2, 1fr);
+        // }
       }
     }
   }
