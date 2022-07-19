@@ -13,6 +13,7 @@ import Education from "./pages/Education/Education";
 import Technology from "./pages/Technology/Technology";
 import { DetailTemplate } from "./templates/DetailTemplate/DetailTemplate";
 import About from "./pages/About/About";
+import DetailPage from "./components/DetailPage/DetailPage";
 
 function App() {
 	useEffect(() => {
@@ -23,14 +24,15 @@ function App() {
 			<Routes>
 				<Route path="/menu" element={<HomeMenu />} />
 				<Route path="detail" element={<DetailTemplate />}>
-					<Route path="technology" element={<Technology />} ></Route>
+					{/* <Route path="technology" element={<Technology />} ></Route>
 					<Route path="ecommerce" element={<Ecommerce />} ></Route>
 					<Route path="travel" element={<Travel />} ></Route>
 					<Route path="sell" element={<Sell />} ></Route>
 					<Route path="medical" element={<Medical />} ></Route>
 					<Route path="industry" element={<Industry />} ></Route>
 					<Route path="house" element={<House />} ></Route>
-					<Route path="education" element={<Education />} ></Route>
+					<Route path="education" element={<Education />} ></Route> */}
+					     <Route path=":detailID" element={<DetailPage/>} />
 				</Route>
 				<Route path="about" element={<About />} ></Route>
 

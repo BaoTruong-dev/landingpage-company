@@ -59,7 +59,7 @@
   ],
   "pages": [
     {
-      "id": "congnghe",
+      "id": "technology",
       "name": "CÔNG NGHỆ",
       "posts": [
         {
@@ -95,7 +95,7 @@
       ]
     },
     {
-      "id": "dulichvavuichoigiaitri",
+      "id": "travel",
       "name": "DU LỊCH VÀ VUI CHƠI GIẢI TRÍ",
       "posts": [
         {
@@ -136,29 +136,9 @@
       ]
     },
     {
-        "id": "batdongsan",
+        "id": "house",
         "name": "BẤT ĐỘNG SẢN",
         "posts": [
-          {
-            "title": "Thực tế tăng cường",
-            "content": "Công nghệ thực tế tăng cường (AR – Augmented Reality) là một trong những ứng dụng công nghệ được sử dụng rộng rãi và phổ biến với những người trẻ trong thời đại công nghệ 4.0. DQV GROUP chúng tôi có đầy đủ đội ngũ nhân viên chuyên sản xuất hệ thống công nghệ AR phục vụ cho các dự án phát triển của đối tác.",
-            "image": "https://images.unsplash.com/photo-1637664067109-a6a00840d894?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8dmlydHVhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
-          },
-          {
-            "title": "Thực tế tăng cường",
-            "content": "Công nghệ thực tế tăng cường (AR – Augmented Reality) là một trong những ứng dụng công nghệ được sử dụng rộng rãi và phổ biến với những người trẻ trong thời đại công nghệ 4.0. DQV GROUP chúng tôi có đầy đủ đội ngũ nhân viên chuyên sản xuất hệ thống công nghệ AR phục vụ cho các dự án phát triển của đối tác.",
-            "image": "https://images.unsplash.com/photo-1637664067109-a6a00840d894?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8dmlydHVhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
-          },
-          {
-            "title": "Thực tế tăng cường",
-            "content": "Công nghệ thực tế tăng cường (AR – Augmented Reality) là một trong những ứng dụng công nghệ được sử dụng rộng rãi và phổ biến với những người trẻ trong thời đại công nghệ 4.0. DQV GROUP chúng tôi có đầy đủ đội ngũ nhân viên chuyên sản xuất hệ thống công nghệ AR phục vụ cho các dự án phát triển của đối tác.",
-            "image": "https://images.unsplash.com/photo-1637664067109-a6a00840d894?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8dmlydHVhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
-          },
-          {
-            "title": "Thực tế tăng cường",
-            "content": "Công nghệ thực tế tăng cường (AR – Augmented Reality) là một trong những ứng dụng công nghệ được sử dụng rộng rãi và phổ biến với những người trẻ trong thời đại công nghệ 4.0. DQV GROUP chúng tôi có đầy đủ đội ngũ nhân viên chuyên sản xuất hệ thống công nghệ AR phục vụ cho các dự án phát triển của đối tác.",
-            "image": "https://images.unsplash.com/photo-1637664067109-a6a00840d894?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8dmlydHVhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
-          },
           {
             "title": "Thực tế tăng cường",
             "content": "Công nghệ thực tế tăng cường (AR – Augmented Reality) là một trong những ứng dụng công nghệ được sử dụng rộng rãi và phổ biến với những người trẻ trong thời đại công nghệ 4.0. DQV GROUP chúng tôi có đầy đủ đội ngũ nhân viên chuyên sản xuất hệ thống công nghệ AR phục vụ cho các dự án phát triển của đối tác.",
@@ -191,24 +171,111 @@
           }
         ]
       },
-    {
-      "id": 2,
-      "name": "John",
-      "email": "john@mail.com",
-      "adderss": "North street"
-    },
-    {
-      "id": 3,
-      "name": "Robert",
-      "email": "robert@mail.com",
-      "adderss": "East street"
-    },
-    {
-      "id": 4,
-      "name": "Mani",
-      "email": "mani@mail.com",
-      "adderss": "West street"
-    }
+      {
+        "id": "education",
+        "name": "GIÁO DỤC",
+        "posts": [
+          {
+            "title": "Giáo dục",
+            "content": "Công nghệ thực tế tăng cường (AR – Augmented Reality) là một trong những ứng dụng công nghệ được sử dụng rộng rãi và phổ biến với những người trẻ trong thời đại công nghệ 4.0. DQV GROUP chúng tôi có đầy đủ đội ngũ nhân viên chuyên sản xuất hệ thống công nghệ AR phục vụ cho các dự án phát triển của đối tác.",
+            "image": "https://images.unsplash.com/photo-1637664067109-a6a00840d894?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8dmlydHVhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
+          },
+          {
+            "title": "Thực tế tăng cường",
+            "content": "Công nghệ thực tế tăng cường (AR – Augmented Reality) là một trong những ứng dụng công nghệ được sử dụng rộng rãi và phổ biến với những người trẻ trong thời đại công nghệ 4.0. DQV GROUP chúng tôi có đầy đủ đội ngũ nhân viên chuyên sản xuất hệ thống công nghệ AR phục vụ cho các dự án phát triển của đối tác.",
+            "image": "https://images.unsplash.com/photo-1637664067109-a6a00840d894?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8dmlydHVhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
+          },
+          {
+            "title": "Thực tế tăng cường",
+            "content": "Công nghệ thực tế tăng cường (AR – Augmented Reality) là một trong những ứng dụng công nghệ được sử dụng rộng rãi và phổ biến với những người trẻ trong thời đại công nghệ 4.0. DQV GROUP chúng tôi có đầy đủ đội ngũ nhân viên chuyên sản xuất hệ thống công nghệ AR phục vụ cho các dự án phát triển của đối tác.",
+            "image": "https://images.unsplash.com/photo-1637664067109-a6a00840d894?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8dmlydHVhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
+          }
+        ]
+      },
+      {
+        "id": "industry",
+        "name": "CÔNG NGHIỆP",
+        "posts": [
+          {
+            "title": "Công nghiệp",
+            "content": "Công nghệ thực tế tăng cường (AR – Augmented Reality) là một trong những ứng dụng công nghệ được sử dụng rộng rãi và phổ biến với những người trẻ trong thời đại công nghệ 4.0. DQV GROUP chúng tôi có đầy đủ đội ngũ nhân viên chuyên sản xuất hệ thống công nghệ AR phục vụ cho các dự án phát triển của đối tác.",
+            "image": "https://images.unsplash.com/photo-1637664067109-a6a00840d894?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8dmlydHVhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
+          },
+          {
+            "title": "Thực tế tăng cường",
+            "content": "Công nghệ thực tế tăng cường (AR – Augmented Reality) là một trong những ứng dụng công nghệ được sử dụng rộng rãi và phổ biến với những người trẻ trong thời đại công nghệ 4.0. DQV GROUP chúng tôi có đầy đủ đội ngũ nhân viên chuyên sản xuất hệ thống công nghệ AR phục vụ cho các dự án phát triển của đối tác.",
+            "image": "https://images.unsplash.com/photo-1637664067109-a6a00840d894?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8dmlydHVhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
+          },
+          {
+            "title": "Thực tế tăng cường",
+            "content": "Công nghệ thực tế tăng cường (AR – Augmented Reality) là một trong những ứng dụng công nghệ được sử dụng rộng rãi và phổ biến với những người trẻ trong thời đại công nghệ 4.0. DQV GROUP chúng tôi có đầy đủ đội ngũ nhân viên chuyên sản xuất hệ thống công nghệ AR phục vụ cho các dự án phát triển của đối tác.",
+            "image": "https://images.unsplash.com/photo-1637664067109-a6a00840d894?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8dmlydHVhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
+          }
+        ]
+      },
+      {
+        "id": "medical",
+        "name": "Y TẾ",
+        "posts": [
+          {
+            "title": "Y tế",
+            "content": "Công nghệ thực tế tăng cường (AR – Augmented Reality) là một trong những ứng dụng công nghệ được sử dụng rộng rãi và phổ biến với những người trẻ trong thời đại công nghệ 4.0. DQV GROUP chúng tôi có đầy đủ đội ngũ nhân viên chuyên sản xuất hệ thống công nghệ AR phục vụ cho các dự án phát triển của đối tác.",
+            "image": "https://images.unsplash.com/photo-1637664067109-a6a00840d894?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8dmlydHVhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
+          },
+          {
+            "title": "Thực tế tăng cường",
+            "content": "Công nghệ thực tế tăng cường (AR – Augmented Reality) là một trong những ứng dụng công nghệ được sử dụng rộng rãi và phổ biến với những người trẻ trong thời đại công nghệ 4.0. DQV GROUP chúng tôi có đầy đủ đội ngũ nhân viên chuyên sản xuất hệ thống công nghệ AR phục vụ cho các dự án phát triển của đối tác.",
+            "image": "https://images.unsplash.com/photo-1637664067109-a6a00840d894?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8dmlydHVhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
+          },
+          {
+            "title": "Thực tế tăng cường",
+            "content": "Công nghệ thực tế tăng cường (AR – Augmented Reality) là một trong những ứng dụng công nghệ được sử dụng rộng rãi và phổ biến với những người trẻ trong thời đại công nghệ 4.0. DQV GROUP chúng tôi có đầy đủ đội ngũ nhân viên chuyên sản xuất hệ thống công nghệ AR phục vụ cho các dự án phát triển của đối tác.",
+            "image": "https://images.unsplash.com/photo-1637664067109-a6a00840d894?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8dmlydHVhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
+          }
+        ]
+      },
+      {
+        "id": "sell",
+        "name": "BÁN LẺ",
+        "posts": [
+          {
+            "title": "Bán lé",
+            "content": "Công nghệ thực tế tăng cường (AR – Augmented Reality) là một trong những ứng dụng công nghệ được sử dụng rộng rãi và phổ biến với những người trẻ trong thời đại công nghệ 4.0. DQV GROUP chúng tôi có đầy đủ đội ngũ nhân viên chuyên sản xuất hệ thống công nghệ AR phục vụ cho các dự án phát triển của đối tác.",
+            "image": "https://images.unsplash.com/photo-1637664067109-a6a00840d894?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8dmlydHVhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
+          },
+          {
+            "title": "Thực tế tăng cường",
+            "content": "Công nghệ thực tế tăng cường (AR – Augmented Reality) là một trong những ứng dụng công nghệ được sử dụng rộng rãi và phổ biến với những người trẻ trong thời đại công nghệ 4.0. DQV GROUP chúng tôi có đầy đủ đội ngũ nhân viên chuyên sản xuất hệ thống công nghệ AR phục vụ cho các dự án phát triển của đối tác.",
+            "image": "https://images.unsplash.com/photo-1637664067109-a6a00840d894?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8dmlydHVhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
+          },
+          {
+            "title": "Thực tế tăng cường",
+            "content": "Công nghệ thực tế tăng cường (AR – Augmented Reality) là một trong những ứng dụng công nghệ được sử dụng rộng rãi và phổ biến với những người trẻ trong thời đại công nghệ 4.0. DQV GROUP chúng tôi có đầy đủ đội ngũ nhân viên chuyên sản xuất hệ thống công nghệ AR phục vụ cho các dự án phát triển của đối tác.",
+            "image": "https://images.unsplash.com/photo-1637664067109-a6a00840d894?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8dmlydHVhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
+          }
+        ]
+      },
+      {
+        "id": "ecommerce",
+        "name": "THƯƠNG MẠI ĐIỆN TỬ",
+        "posts": [
+          {
+            "title": "Thương mại điện tử",
+            "content": "Công nghệ thực tế tăng cường (AR – Augmented Reality) là một trong những ứng dụng công nghệ được sử dụng rộng rãi và phổ biến với những người trẻ trong thời đại công nghệ 4.0. DQV GROUP chúng tôi có đầy đủ đội ngũ nhân viên chuyên sản xuất hệ thống công nghệ AR phục vụ cho các dự án phát triển của đối tác.",
+            "image": "https://images.unsplash.com/photo-1637664067109-a6a00840d894?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8dmlydHVhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
+          },
+          {
+            "title": "Thực tế tăng cường",
+            "content": "Công nghệ thực tế tăng cường (AR – Augmented Reality) là một trong những ứng dụng công nghệ được sử dụng rộng rãi và phổ biến với những người trẻ trong thời đại công nghệ 4.0. DQV GROUP chúng tôi có đầy đủ đội ngũ nhân viên chuyên sản xuất hệ thống công nghệ AR phục vụ cho các dự án phát triển của đối tác.",
+            "image": "https://images.unsplash.com/photo-1637664067109-a6a00840d894?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8dmlydHVhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
+          },
+          {
+            "title": "Thực tế tăng cường",
+            "content": "Công nghệ thực tế tăng cường (AR – Augmented Reality) là một trong những ứng dụng công nghệ được sử dụng rộng rãi và phổ biến với những người trẻ trong thời đại công nghệ 4.0. DQV GROUP chúng tôi có đầy đủ đội ngũ nhân viên chuyên sản xuất hệ thống công nghệ AR phục vụ cho các dự án phát triển của đối tác.",
+            "image": "https://images.unsplash.com/photo-1637664067109-a6a00840d894?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8dmlydHVhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
+          }
+        ]
+      }
   ]
 
 }

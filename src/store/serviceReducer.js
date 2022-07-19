@@ -1,5 +1,5 @@
 const initialValue = {
-    data: []
+    data: [],
 };
 
 const serviceReducer = (state = initialValue, action) => {

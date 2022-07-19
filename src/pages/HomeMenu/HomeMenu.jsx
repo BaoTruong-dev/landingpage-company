@@ -26,7 +26,7 @@ export default function HomeMenu() {
 	// const navigate = useNavigate();
 	const redirect = (path) => {
 		setTimeout(() => {
-			navigate(`/detail/${path}`);
+			navigate(`/detail/${path}`, {state:{id:path, dataCategory: data}});
 		}, 3000);
 	};
 	useEffect(() => {
@@ -41,6 +41,7 @@ export default function HomeMenu() {
 	const handleClosed = () => {
 		// navigate('/');
 		// console.log('click');
+
 		tl.current.reverse();
 		setTimeout(() => {
 			navigate('/');
