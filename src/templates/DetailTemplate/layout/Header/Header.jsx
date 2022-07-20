@@ -1,18 +1,25 @@
 import React from 'react'
 import { useEffect } from 'react';
 import { useRef } from 'react';
-import { Link, Outlet, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import logo from "../../../../assets/img/logo.png";
 import gsap from "gsap";
 
 
 export default function Header() {
 
+
+	//useRef, animation with gsap
 	const tl=useRef();
 	const menuLeftRef=useRef();
 	const closeIconRef=useRef();
 	const logoRef=useRef();
+
+
 	const navigate=useNavigate();
+
+
+	//animation when loading into page
 	useEffect(()=>{
 		tl.current=gsap.timeline().from(menuLeftRef.current,{
 			opacity:0, y:40, duration: 0.75, delay:1
@@ -21,22 +28,21 @@ export default function Header() {
 		},"-=0.2").from(logoRef.current, { y: 40, duration: 1, opacity: 0 }, '-=1.5');
 	},[])
 
+
+	// animation when close page
 	const handleClose=()=>{
-
-		const rightPage=gsap.timeline().to(".wraper",{y:120, duration:1 ,opacity:0});
-		const leftPage=gsap.timeline().to(".nav",{y:-6000, opacity:0, duration: 3},"-=0.5");
-		const imageNav=gsap.timeline().to(".nav-image",{opacity:0,duration:1});
-		const socialList=gsap.timeline().to(".social-list",{opacity:0,x:"105%", duration: 1.5});
-		rightPage.play();
-		leftPage.play();
-		imageNav.play();
-		socialList.play();
-
+		gsap.timeline().to(".wraper",{y:120, duration:1 ,opacity:0});
+		gsap.timeline().to(".nav",{y:"-100vh", opacity:0, duration: 2.5},"-=0.5");
+		gsap.timeline().to(".nav-image",{opacity:0,duration:1});
+		gsap.timeline().to(".social-list",{opacity:0,x:"105%", duration: 1.5});
+		gsap.timeline().to(".navigation",{opacity:0});
 		tl.current.reverse();
 		setTimeout(() => {
 			navigate('/');
 		}, 1800);
 	}
+
+	
   return (
     <div className='header-template'>
       					<div className="header-menu">

@@ -1,4 +1,4 @@
-import { Outlet, Route, Link } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import { useEffect } from "react";
 import Header from "./layout/Header/Header";
 import Social from "./layout/Social/Social";

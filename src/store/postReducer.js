@@ -10,8 +10,9 @@ const postReducer = (state = initialValue, action) => {
                 ...initialValue,
                 data: action.payload
             };
+        default:
+            return state;
     }
-    return state;
 };
 
 export default postReducer;

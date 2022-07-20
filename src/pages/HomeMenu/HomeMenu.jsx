@@ -1,14 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, Outlet } from "react-router-dom";
 import logo from "../../assets/img/logo.png";
-import img1 from "../../assets/img/menu/1.png";
-import img2 from "../../assets/img/menu/2.png";
-import img3 from "../../assets/img/menu/3.png";
-import img4 from "../../assets/img/menu/4.png";
-import img5 from "../../assets/img/menu/5.png";
-import img6 from "../../assets/img/menu/6.png";
-import img7 from "../../assets/img/menu/7.png";
-import img8 from "../../assets/img/menu/8.png";
 import { useSelector } from "react-redux";
 import ServiceItem from "../../components/ServiceItem/ServiceItem";
 import { useNavigate } from 'react-router-dom';
@@ -23,10 +15,10 @@ export default function HomeMenu() {
 	const closeRef = useRef();
 	const logoRef = useRef();
 	const tl = useRef();
-	// const navigate = useNavigate();
 	const redirect = (path) => {
+		
 		setTimeout(() => {
-			navigate(`/detail/${path}`, {state:{id:path, dataCategory: data}});
+			window.location.href=`/detail/${path}`;
 		}, 3000);
 	};
 	useEffect(() => {
