@@ -1,4 +1,5 @@
-import { API } from '../api/api';
+import { API} from '../constant/api';
+
 
 const serviceService = {
     getService() {

@@ -1,4 +1,4 @@
-import { API_Posts} from '../api/api';
+import { API_Posts} from '../constant/api';
 
 const servicePosts = {
     getPostsData() {

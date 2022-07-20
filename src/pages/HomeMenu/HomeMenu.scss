@@ -3,7 +3,7 @@
     background: linear-gradient(to top, #0c0c0c, #2e2d2d);
     transform-origin: top;
     .header {
-      position: fixed;
+      position: sticky;
       width: 100%;
       top: 0;
       left: 0;
@@ -28,6 +28,8 @@
         align-items: center;
         padding: 0 90px;
         .menu-left {
+          background-color: transparent;
+          mix-blend-mode: difference;
           &:hover button,
           &:hover i {
             color: #fff;
@@ -72,7 +74,6 @@
     }
     .list {
       height: 100%;
-      padding-top: 162px;
       .title {
         color: #fff;
         font-size: 48px;
@@ -83,19 +84,32 @@
 
       .list-content {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
         gap: 110px 60px;
         padding: 90px;
-        //   list-style: none;
-        //   display: flex;
-        //   align-items: center;
-        //   justify-content: start;
-        //   flex-wrap: wrap;
         .service-item:nth-child(2),
         .service-item:nth-child(5),
         .service-item:nth-child(8) {
           margin-top: 100px;
         }
+      }
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    .container {
+      .header {
+        .header-menu {
+          padding: 0 25px;
+        }
+      }
+      .list {
+        .title {
+          font-size: 24px;
+          padding: 0 25px;
+        }
+        // .list-content {
+        //   grid-template-columns: repeat(2, 1fr);
+        // }
       }
     }
   }
