@@ -18,11 +18,15 @@ export default function HomeMenu() {
 	const tl = useRef();
 	const listContentRef = useRef();
 	const redirect = (path) => {
+
+
+
 		tl.current.reverse();
 		setTimeout(() => {
 			navigate(`/detail/${path}`);
 		}, 2600);
 	};
+
 	const handleClosed = () => {
 		tl.current.reverse();
 		setTimeout(() => {
@@ -70,10 +74,12 @@ export default function HomeMenu() {
 						</div>
 					</div>
 					<div className="list">
+
 						<h2 className="title" ref={titleRef}>Lĩnh Vực</h2>
 						<div className="list-content" ref={listContentRef}>
 							{data?.map((e, index) => {
 								return <ServiceItem type={index % 2 == 0 ? true : false} key={index} content={e.CategoryDescription} src={`${API}/${e.Image}`} name={e.CategoryName} id={e.CategoryID} onClick={() => redirect(e.path)} />;
+
 							})}
 						</div>
 					</div>
@@ -81,4 +87,4 @@ export default function HomeMenu() {
 			</div>
 		</>
 	);
-}
+	}
