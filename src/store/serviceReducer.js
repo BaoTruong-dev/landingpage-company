@@ -1,5 +1,5 @@
 const initialValue = {
-    data: []
+    data: [],
 };
 
 const serviceReducer = (state = initialValue, action) => {
@@ -9,8 +9,10 @@ const serviceReducer = (state = initialValue, action) => {
                 ...state,
                 data: action.payload
             };
+            default:
+                return state;
     }
-    return state;
+ 
 };
 
 export default serviceReducer;

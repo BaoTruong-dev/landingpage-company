@@ -3,7 +3,15 @@ import { Link, useNavigate } from "react-router-dom";
 import logo from "../../assets/img/logo.png";
 import background from "../../assets/img/background.png";
 import menu from "../../assets/img/menu.png";
+import { Unity, useUnityContext } from "react-unity-webgl";
+
 export default function Home(props) {
+	const { unityProvider } = useUnityContext({
+		loaderUrl: "Build/BUILD.loader.js",
+		dataUrl: "Build/BUILD.wasm",
+		frameworkUrl: "Build/BUILD.framework.js",
+		codeUrl: "Build/BUILD.wasm",
+	  });
 	const [isActive, setIsActive] = useState(false);
 	const navigate = useNavigate();
 	const handleActive = () => {
@@ -14,6 +22,7 @@ export default function Home(props) {
 	};
 	return (
 		<div className="home">
+			{/* <Unity unityProvider={unityProvider}  style={{width:"100%",height:"100vh"}}/>; */}
 			<img src={background} alt="background" />
 			<div className="header-home">
 				<div className="header-menu">
