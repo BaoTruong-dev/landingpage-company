@@ -8,8 +8,11 @@ import about3 from "../../assets/img/About/3 (2).png";
 import about4 from "../../assets/img/About/4.png";
 import { info } from "../../constant/info";
 import { gsap } from "gsap";
+import { useSelector } from "react-redux";
+import { API } from "../../constant/api";
 export default function About() {
 	const [state, setState] = useState(0);
+	const { data } = useSelector(store => store.info);
 	const navigate = useNavigate();
 	const tl = useRef();
 	const aboutRef = useRef();
@@ -46,18 +49,17 @@ export default function About() {
 			let e2 = e.target.children[1].offsetLeft;
 			let e3 = e.target.children[2].offsetLeft;
 			let e4 = e.target.children[3].offsetLeft;
-			if (e1 - 30 == scroll) {
+			if (Math.floor(scroll) + 30 + 1 - e1 == 0 || Math.floor(scroll) + 30 + 1 - e1 == 1) {
 				setState(0);
 			}
-			else if (e2 - 30 == scroll) {
+			else if (Math.floor(scroll) + 30 + 1 - e2 == 0 || Math.floor(scroll) + 30 + 1 - e2 == 1) {
 				setState(1);
 
 			}
-			else if (e3 - 30 == scroll) {
+			else if (Math.floor(scroll) + 30 + 1 - e3 == 0 || Math.floor(scroll) + 30 + 1 - e3 == 1) {
 				setState(2);
-
 			}
-			else if (e4 - 97.4000244140625 == scroll) {
+			else {
 				setState(3);
 			}
 		});
@@ -119,29 +121,29 @@ export default function About() {
 				</div>
 				<div className="about-us" ref={aboutRef}>
 					<div className={`about-item ${state == 0 ? 'active' : null}`} data-id='0' onClick={handleTab}>
-						<img src={about1} alt="1" />
+						<img src alt="1" />
 						<div className="num">01</div>
 					</div>
 					<div className={`about-item ${state == 1 ? 'active' : null}`} data-id='1' onClick={handleTab}>
-						<img src={about2} alt="2" />
+						<img src alt="2" />
 						<div className="num">02</div>
 					</div>
 					<div className={`about-item ${state == 2 ? 'active' : null}`} data-id='2' onClick={handleTab}>
-						<img src={about3} alt="3" />
+						<img src alt="3" />
 						<div className="num">03</div>
 					</div>
 					<div className={`about-item ${state == 3 ? 'active' : null}`} data-id='3' onClick={handleTab}>
-						<img src={about4} alt="4" />
+						<img src alt="4" />
 						<div className="num">04</div>
 					</div>
 				</div>
 				<div className="about-content" ref={contentRef}>
-					<h2>{info[state].title}</h2>
-					{info[state].content.map((e, index) => {
-						if (typeof (e[0]) == 'string') {
-							return <p key={index}>{e}</p>;
+					<h2>{data[state]?.Title}</h2>
+					{data[state]?.Details.map((e, index) => {
+						if (!e.Title) {
+							return <p key={index}>{e.Content}</p>;
 						} else {
-							return <p key={index}><span>{e.for}</span> {e.info}</p>;
+							return <p key={index}><span>{e.Title}</span> {e.Content}</p>;
 						}
 					})}
 				</div>
