@@ -21,11 +21,14 @@ export default function HomeMenu() {
 			window.location.href=`/detail/${path}`;
 		}, 3000);
 	};
+
 	useEffect(() => {
 		tl.current = gsap.timeline().from(overlayRef.current, { scaleY: 0, duration: 1.5, opacity: 0 }).from(closeIconRef.current,
 			{
+
 				opacity: 0, rotation: "-360", duration: 1,
 			},
+
 			"-=.5"
 		).from(closeRef.current, { y: 20, duration: 1.5, opacity: 0, color: '#ffae0c' }, "-=.5").from(logoRef.current, { y: 20, duration: 1, opacity: 0 }, '-=1');
 		;

@@ -1,13 +1,14 @@
 .service-item {
   position: relative;
   background-color: #393939;
-  height: 600px;
+  height: max-content;
   margin: 0 auto;
   padding: 30px;
   border-radius: 8px;
   text-align: center;
   cursor: pointer;
-  &:hover .overlay-img {
+  &:hover .overlay-img,
+  &:active .overlay-img {
     visibility: visible;
     opacity: 1;
   }
@@ -32,7 +33,7 @@
   .number {
     position: absolute;
     top: 20px;
-    left: -40px;
+    left: 0;
     font-size: 140px;
     color: #ffae0c;
     z-index: 1;
