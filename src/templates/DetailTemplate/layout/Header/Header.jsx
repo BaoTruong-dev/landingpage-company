@@ -21,11 +21,15 @@ export default function Header() {
 
 	//animation when loading into page
 	useEffect(()=>{
-		tl.current=gsap.timeline().from(menuLeftRef.current,{
-			opacity:0, y:40, duration: 0.75, delay:1
-		},"-=0.5").from(closeIconRef.current,{
-			opacity:0, rotate: "-360", duration: 1, x:-50,
-		},"-=0.2").from(logoRef.current, { y: 40, duration: 1, opacity: 0 }, '-=1.5');
+
+
+			tl.current=gsap.timeline().from(menuLeftRef.current,{
+				opacity:0, y:40, duration: 0.75, delay:1
+			},"-=0.5").from(closeIconRef.current,{
+				opacity:0, rotate: "-360", duration: 1, x:-50,
+			},"-=0.2").from(logoRef.current, { y: 40, duration: 1, opacity: 0 }, '-=1.5');
+
+
 	},[])
 
 
@@ -49,7 +53,7 @@ export default function Header() {
 						<div className="menu-left" ref={menuLeftRef}  onClick={handleClose}>
 				
 								<button>
-									<i class="fa fa-times" ref={closeIconRef}></i> <span>Close</span>
+									<i class="fa fa-times" ref={closeIconRef}></i> <span className='span-close'>Close</span>
 								</button>
 						
 						</div>

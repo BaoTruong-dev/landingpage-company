@@ -27,12 +27,9 @@ function* fetchPostsData() {
 }
 
 function* rootSaga() {
-<<<<<<< HEAD
     yield takeLatest('FETCH_SERVICE_DATA', fetchServiceData);
     yield takeLatest('FETCH_POSTS_DATA',fetchPostsData);    
-=======
-    yield takeEvery('FETCH_SERVICE_DATA', fetchServiceData);
->>>>>>> 93ad0f755b330d8959592dfc75a676c989b90c60
+
 }
 
 
