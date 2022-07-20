@@ -34,13 +34,13 @@ export default function HomeMenu() {
 		tl.current.reverse();
 		setTimeout(() => {
 			navigate(`/detail/${path}`);
-		}, 2600);
+		}, 2700);
 	};
 	const handleClosed = () => {
 		tl.current.reverse();
 		setTimeout(() => {
 			navigate('/');
-		}, 2600);
+		}, 2700);
 	};
 	// const addToRefs = (el) => {
 	// 	if (el && !listItemRef.current.includes(el)) {
@@ -50,9 +50,9 @@ export default function HomeMenu() {
 	useEffect(() => {
 		tl.current = gsap.timeline().from(overlayRef.current, { scaleY: 0, duration: 1.2, opacity: 0 }).from(closeIconRef.current,
 			{
-				opacity: 0, rotation: "-360", duration: 1,
+				y: 10, opacity: 0, rotation: "-360", duration: 1, color: '#ffae0c',
 			}, "-=.5"
-		).from(closeRef.current, { y: 10, duration: .8, opacity: 0, color: '#ffae0c' }, "-=.5").from(logoRef.current, { y: 20, duration: 1, opacity: 0 }, '-=1').from(titleRef.current, { y: 20, opacity: 0, duration: 1 }, "-=.5").from(
+		).from(closeRef.current, { y: 10, duration: .5, opacity: 0, color: '#ffae0c' }, "-=.5").from(logoRef.current, { scale: '0', duration: 1.5, opacity: 0 }, '-=1').from(titleRef.current, { y: 20, opacity: 0, duration: 1 }, "-=.5").from(
 			listContentRef.current, .5,
 			{ y: 30, opacity: 0 },
 			"-=.5"

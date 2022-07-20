@@ -6,7 +6,7 @@ const serviceReducer = (state = initialValue, action) => {
     switch (action.type) {
         case 'GET_SERVICE':
             return {
-                ...initialValue,
+                ...state,
                 data: action.payload
             };
     }

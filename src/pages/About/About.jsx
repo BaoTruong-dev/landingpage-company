@@ -30,14 +30,60 @@ export default function About() {
 		tl.current.reverse();
 		setTimeout(() => {
 			navigate('/');
-		}, 3500);
+		}, 3600);
 	};
 	useEffect(() => {
 		tl.current = gsap.timeline().from(overlayRef.current, { scaleY: 0, duration: 1.2, opacity: 0, background: 'black' }).from(closeIconRef.current,
 			{
-				opacity: 0, rotation: "-360", duration: 1,
+				opacity: 0, rotation: "-360", duration: 1, color: '#ffae0c'
 			}, "-=.5"
-		).from(closeRef.current, { y: 10, duration: .8, opacity: 0, color: '#ffae0c' }, "-=.5").from(logoRef.current, { y: 30, duration: 1, opacity: 0 }, '-=1').from(q('.icon'), 1, { x: 30, opacity: 0, stagger: .3 }, "-=.5").from(q1('.about-item'), 1, { y: 30, opacity: 0, stagger: 0.3 }, "-=1.5").from(contentRef.current, 1, { y: 30, opacity: 0 }, "-=1.5").from(circleRef.current, 1, { scale: 0 }, "-=1");
+		).from(closeRef.current, { y: 10, duration: .5, opacity: 0, color: '#ffae0c' }, "-=.5").from(logoRef.current, { scale: 0, duration: 1.5, opacity: 0 }, '-=1').from(q('.icon'), 1, { x: 30, opacity: 0, stagger: .3 }, "-=.5").from(q1('.about-item'), 1, { y: 30, opacity: 0, stagger: 0.3 }, "-=1.5").from(contentRef.current, 1, { y: 30, opacity: 0 }, "-=1.5").from(circleRef.current, 1, { scale: 0 }, "-=1");
+	}, []);
+	useEffect(() => {
+		aboutRef?.current?.addEventListener('scroll', (e) => {
+			let scroll = e.target.scrollLeft;
+			let e1 = e.target.children[0].offsetLeft;
+			let e2 = e.target.children[1].offsetLeft;
+			let e3 = e.target.children[2].offsetLeft;
+			let e4 = e.target.children[3].offsetLeft;
+			if (e1 - 30 == scroll) {
+				setState(0);
+			}
+			else if (e2 - 30 == scroll) {
+				setState(1);
+
+			}
+			else if (e3 - 30 == scroll) {
+				setState(2);
+
+			}
+			else if (e4 - 97.4000244140625 == scroll) {
+				setState(3);
+			}
+		});
+		return () => {
+			aboutRef?.current?.addEventListener('scroll', (e) => {
+				let scroll = e.target.scrollLeft;
+				let e1 = e.target.children[0].offsetLeft;
+				let e2 = e.target.children[1].offsetLeft;
+				let e3 = e.target.children[2].offsetLeft;
+				let e4 = e.target.children[3].offsetLeft;
+				if (e1 - 30 == scroll) {
+					setState(0);
+				}
+				else if (e2 - 30 == scroll) {
+					setState(1);
+
+				}
+				else if (e3 - 30 == scroll) {
+					setState(2);
+
+				}
+				else if (e4 - 97.4000244140625 == scroll) {
+					setState(3);
+				}
+			});
+		};
 	}, []);
 	return (
 		<div className="about" ref={overlayRef}>

@@ -14,7 +14,7 @@ function* fetchServiceData() {
 }
 
 function* rootSaga() {
-    yield takeLatest('FETCH_SERVICE_DATA', fetchServiceData);
+    yield takeEvery('FETCH_SERVICE_DATA', fetchServiceData);
 }
 
 export default rootSaga;

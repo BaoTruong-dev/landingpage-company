@@ -9,6 +9,10 @@
       align-items: center;
       justify-content: space-between;
       .about-left {
+        &:hover span,
+        &:hover i {
+          color: #ffae0c !important;
+        }
         button {
           background-color: transparent;
           color: #6d6d6d;
@@ -22,7 +26,11 @@
             color: #6d6d6d;
             font-size: 30px;
             margin-right: 20px;
+            transition: 0.4s color;
           }
+        }
+        span {
+          transition: 0.4s color;
         }
       }
       .about-center {
@@ -135,6 +143,78 @@
       object-fit: cover;
       top: 0;
       left: 0;
+    }
+  }
+  @media screen and (min-height: 1440px) {
+    height: 100vh;
+  }
+  @media screen and (max-width: 1024px) {
+    .container {
+      .about-us {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      }
+    }
+    .circle {
+      bottom: -140px;
+      right: -140px;
+    }
+  }
+  @media screen and (max-width: 810px) {
+    .container {
+      padding: 30px;
+      .head {
+        .about-center {
+          p {
+            font-size: 20px;
+          }
+        }
+      }
+      .about-us {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      }
+    }
+    .circle {
+      bottom: -170px;
+      right: -170px;
+    }
+  }
+  @media screen and (max-width: 430px) {
+    overflow: unset;
+    .container {
+      .head {
+        flex-direction: column;
+        justify-content: baseline;
+        align-items: baseline;
+        .about-center {
+          width: 100%;
+          margin-top: 30px;
+          img {
+            width: 110px;
+            height: 80px;
+          }
+        }
+        .about-right {
+          display: none;
+        }
+      }
+      .about-us {
+        margin: 50px 0;
+        grid-template-columns: unset;
+        grid-auto-flow: column;
+        grid-auto-columns: 80%;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        .about-item {
+          scroll-snap-stop: always;
+          scroll-snap-align: start;
+        }
+      }
+    }
+    .circle {
+      display: none;
     }
   }
 }
