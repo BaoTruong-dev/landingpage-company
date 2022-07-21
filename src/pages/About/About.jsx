@@ -143,7 +143,7 @@ export default function About() {
 						if (!e.Title) {
 							return <p key={index}>{e.Content}</p>;
 						} else {
-							return <p key={index}><span>{e.Title}</span> {e.Content}</p>;
+							return <p key={index}><span>{e.Title}:</span> {e.Content}</p>;
 						}
 					})}
 				</div>

@@ -18,20 +18,16 @@ export default function HomeMenu() {
 	const tl = useRef();
 	const listContentRef = useRef();
 	const redirect = (path) => {
-
-
-
 		tl.current.reverse();
 		setTimeout(() => {
 			navigate(`/detail/${path}`);
-		}, 2600);
+		}, 2670);
 	};
-
 	const handleClosed = () => {
 		tl.current.reverse();
 		setTimeout(() => {
 			navigate('/');
-		}, 2700);
+		}, 2670);
 	};
 	useEffect(() => {
 		tl.current = gsap.timeline().from(overlayRef.current, { scaleY: 0, duration: 1.2, opacity: 0 }).from(closeIconRef.current,
@@ -74,12 +70,10 @@ export default function HomeMenu() {
 						</div>
 					</div>
 					<div className="list">
-
 						<h2 className="title" ref={titleRef}>Lĩnh Vực</h2>
 						<div className="list-content" ref={listContentRef}>
 							{data?.map((e, index) => {
-								return <ServiceItem type={index % 2 == 0 ? true : false} key={index} content={e.CategoryDescription} src={`${API}/${e.Image}`} name={e.CategoryName} id={e.CategoryID} onClick={() => redirect(e.path)} />;
-
+								return <ServiceItem type={index % 2 == 0 ? true : false} key={index} content={e.CategoryDescription} src={`${API}/${e.Image}`} name={e.CategoryName} id={e.CategoryID} onClick={() => redirect(e.CategoryID)} />;
 							})}
 						</div>
 					</div>
@@ -87,4 +81,4 @@ export default function HomeMenu() {
 			</div>
 		</>
 	);
-	}
+}

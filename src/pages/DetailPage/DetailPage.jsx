@@ -20,6 +20,7 @@ export default function DetailPage() {
   let { detailID } = useParams();
   const { data } = useSelector((store) => store.posts);
   let dataPost = [];
+  // console.log(data[index].id );
   const navigate = useNavigate();
   //useRef
   const tl = useRef();
@@ -49,17 +50,20 @@ export default function DetailPage() {
   });
 
   //get data from store redux with id = useParams react-router-dom v6
-  if (data && detailID) {
+  if (data.length > 0 && detailID) {
+
     for (let index = 0; index < data.length; index++) {
-      if (data[index].id === detailID) {
+      console.log(data[0]);
+      if (data[index].id == detailID) {
+        console.log(index);
         dataPost = data[index];
         indexPage = index + 1;
-        if (index === 0) {
+        if (index == 0) {
           pathPrevious = data[data.length - 1].id;
         } else {
           pathPrevious = data[index - 1].id;
         }
-        if (index === data.length - 1) {
+        if (index == data.length - 1) {
           pathNext = data[0].id;
         } else {
           pathNext = data[index + 1].id;
@@ -184,7 +188,6 @@ export default function DetailPage() {
         <div className="heading">
           <img src={image1} alt="1" className="heading-image" />
           <img src={image2} alt="1" className="heading-image-mobile" />
-
           {dataPost && <h1>{dataPost.name}</h1>}
         </div>
         <div className="section">
