@@ -7,7 +7,6 @@ import ServiceItem from "../../components/ServiceItem/ServiceItem";
 import { API } from '../../constant/api';
 export default function HomeMenu() {
 	const { data } = useSelector(store => store.service);
-	console.log(data);
 	const [isClosed, setIsClosed] = useState(false);
 	const navigate = useNavigate();
 	const overlayRef = useRef();
@@ -23,10 +22,10 @@ export default function HomeMenu() {
 			navigate(`/detail/${path}`);
 		}, 2670);
 	};
-	const handleClosed = () => {
+	const handleRedirect = (path) => {
 		tl.current.reverse();
 		setTimeout(() => {
-			navigate('/');
+			navigate(`${path}`);
 		}, 2670);
 	};
 	useEffect(() => {
@@ -46,7 +45,7 @@ export default function HomeMenu() {
 				<div className="container" ref={overlayRef}>
 					<div className='header'>
 						<div className="header-menu">
-							<div className={`menu-left ${isClosed}`} onClick={handleClosed}>
+							<div className={`menu-left ${isClosed}`} onClick={() => handleRedirect('/')}>
 								<div>
 									<button>
 										<i class="fa fa-times" ref={closeIconRef}></i> <span ref={closeRef}>Close</span>
@@ -54,8 +53,8 @@ export default function HomeMenu() {
 								</div>
 							</div>
 							<div className="menu-right">
-								<div className="header-logo" ref={logoRef}>
-									<Link
+								<div className="header-logo" ref={logoRef} onClick={() => handleRedirect('/about')}>
+									<div
 										rel="noopener noreferrer"
 										to="/"
 										className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent"
@@ -64,7 +63,7 @@ export default function HomeMenu() {
 											<img src={logo} alt="logo" />
 										</div>
 										<p>DaiQuocVietCorp</p>
-									</Link>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -73,7 +72,7 @@ export default function HomeMenu() {
 						<h2 className="title" ref={titleRef}>Lĩnh Vực</h2>
 						<div className="list-content" ref={listContentRef}>
 							{data?.map((e, index) => {
-								return <ServiceItem type={index % 2 == 0 ? true : false} key={index} content={e.CategoryDescription} src={`${API}/${e.Image}`} name={e.CategoryName} id={e.CategoryID} onClick={() => redirect(e.CategoryID)} />;
+								return <ServiceItem type={index % 2 == 0 ? true : false} key={index} content={e.CategoryDescription} src={e.Image} name={e.CategoryName} id={e.CategoryID} onClick={() => redirect(e.CategoryID)} />;
 							})}
 						</div>
 					</div>
