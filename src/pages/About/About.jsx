@@ -33,7 +33,7 @@ export default function About() {
 		tl.current.reverse();
 		setTimeout(() => {
 			navigate('/');
-		}, 3600);
+		}, 3750);
 	};
 	useEffect(() => {
 		tl.current = gsap.timeline().from(overlayRef.current, { scaleY: 0, duration: 1.2, opacity: 0, background: 'black' }).from(closeIconRef.current,
@@ -98,7 +98,7 @@ export default function About() {
 							</button>
 						</div>
 					</div>
-					<div className="about-center" ref={logoRef}>
+					<div className="about-center" ref={logoRef} onClick={handleClose}>
 						<div
 							className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent">
 							<img src={logo} alt="logo" />
@@ -121,19 +121,19 @@ export default function About() {
 				</div>
 				<div className="about-us" ref={aboutRef}>
 					<div className={`about-item ${state == 0 ? 'active' : null}`} data-id='0' onClick={handleTab}>
-						<img src alt="1" />
+						<img src={data[0]?.Image} alt="1" />
 						<div className="num">01</div>
 					</div>
 					<div className={`about-item ${state == 1 ? 'active' : null}`} data-id='1' onClick={handleTab}>
-						<img src alt="2" />
+						<img src={data[1]?.Image} alt="2" />
 						<div className="num">02</div>
 					</div>
 					<div className={`about-item ${state == 2 ? 'active' : null}`} data-id='2' onClick={handleTab}>
-						<img src alt="3" />
+						<img src={data[2]?.Image} alt="3" />
 						<div className="num">03</div>
 					</div>
 					<div className={`about-item ${state == 3 ? 'active' : null}`} data-id='3' onClick={handleTab}>
-						<img src alt="4" />
+						<img src={data[3]?.Image} alt="4" />
 						<div className="num">04</div>
 					</div>
 				</div>
@@ -143,7 +143,7 @@ export default function About() {
 						if (!e.Title) {
 							return <p key={index}>{e.Content}</p>;
 						} else {
-							return <p key={index}><span>{e.Title}</span> {e.Content}</p>;
+							return <p key={index}><span>{e.Title}:</span> {e.Content}</p>;
 						}
 					})}
 				</div>

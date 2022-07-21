@@ -1,4 +1,4 @@
-import { call, put, takeLatest } from 'redux-saga/effects';
+import { call, put, takeEvery, takeLatest } from 'redux-saga/effects';
 import serviceInfo from '../service/serviceInfo';
 import servicePosts from '../service/servicePosts';
 import serviceService from '../service/serviceService';
@@ -29,7 +29,6 @@ function* fetchPostsData() {
 function* fetInfoData() {
     try {
         let result = yield call(serviceInfo.getInfo);
-        console.log(result);
         yield put({
             type: 'GET_INFO',
             payload: result,
@@ -40,9 +39,9 @@ function* fetInfoData() {
 }
 
 function* rootSaga() {
-    yield takeLatest('FETCH_SERVICE_DATA', fetchServiceData);
-    yield takeLatest('FETCH_INFO_DATA', fetInfoData);
-    yield takeLatest('FETCH_POSTS_DATA', fetchPostsData);
+    yield takeEvery('FETCH_SERVICE_DATA', fetchServiceData);
+    yield takeEvery('FETCH_INFO_DATA', fetInfoData);
+    yield takeEvery('FETCH_POSTS_DATA', fetchPostsData);
 }
 
 

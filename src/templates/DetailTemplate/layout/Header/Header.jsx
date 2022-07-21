@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { useEffect } from 'react';
 import { useRef } from 'react';
 import { useNavigate, useParams } from "react-router-dom";
@@ -11,16 +11,17 @@ export default function Header() {
 	const {detailID}=useParams();
 
 	//useRef, animation with gsap
-	const tl=useRef();
-	const menuLeftRef=useRef();
-	const closeIconRef=useRef();
-	const logoRef=useRef();
+	const tl = useRef();
+	const menuLeftRef = useRef();
+	const closeIconRef = useRef();
+	const logoRef = useRef();
 
 
-	const navigate=useNavigate();
+	const navigate = useNavigate();
 
 
 	//animation when loading into page
+
 	useEffect(()=>{
 
 
@@ -45,10 +46,12 @@ export default function Header() {
 		gsap.timeline().to(".navigation",{opacity:0});
 		gsap.timeline().to(gsap.utils.selector(".social-list")(".social-icon"),1,{ x:"110%", opacity: 0,duration:1, stagger: .5 });
 
+
 		tl.current.reverse();
 		setTimeout(() => {
 			navigate('/');
 		}, 1800);
+
 	}
 	
 	//animation when click icon
@@ -83,8 +86,11 @@ export default function Header() {
 						
 							</div>
 						</div>
-					</div>
 
-    </div>
-  )
+					</div>
+				</div>
+			</div>
+
+		</div>
+	);
 }

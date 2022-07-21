@@ -19,6 +19,7 @@ export default function DetailPage() {
   let { detailID } = useParams();
   const { data } = useSelector((store) => store.posts);
   let dataPost = [];
+  // console.log(data[index].id );
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -61,6 +62,7 @@ export default function DetailPage() {
   // console.log(dataPost);
   //get data from store redux with id = useParams react-router-dom v6
 
+
   
     if (data && detailID) {
       detailID = detailID * 1;
@@ -79,6 +81,7 @@ export default function DetailPage() {
           } else {
             pathNext = data[index + 1].CategoryID;
           }
+
         }
       }
     }
@@ -99,6 +102,7 @@ export default function DetailPage() {
 
   return (
     <>
+
       {dataPost && (
         <>
           <img
@@ -130,6 +134,7 @@ export default function DetailPage() {
           </div>
           <div className="nav" ref={navRef}>
             {" "}
+
           </div>
           <div className="temp-overlay"></div>
           <div className="wraper" ref={wraperRef}>
