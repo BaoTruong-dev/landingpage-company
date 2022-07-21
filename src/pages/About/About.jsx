@@ -1,15 +1,9 @@
+import { gsap } from "gsap";
 import React, { useEffect, useRef, useState } from "react";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import circle from "../../assets/img/About/Frame 44 1.png";
 import logo from "../../assets/img/About/logo.png";
-import { Link, Outlet, useNavigate } from "react-router-dom";
-import about1 from "../../assets/img/About/1.png";
-import about2 from "../../assets/img/About/2.png";
-import about3 from "../../assets/img/About/3 (2).png";
-import about4 from "../../assets/img/About/4.png";
-import { info } from "../../constant/info";
-import { gsap } from "gsap";
-import { useSelector } from "react-redux";
-import { API } from "../../constant/api";
 export default function About() {
 	const [state, setState] = useState(0);
 	const { data } = useSelector(store => store.info);
@@ -48,15 +42,14 @@ export default function About() {
 			let e1 = e.target.children[0].offsetLeft;
 			let e2 = e.target.children[1].offsetLeft;
 			let e3 = e.target.children[2].offsetLeft;
-			let e4 = e.target.children[3].offsetLeft;
-			if (Math.floor(scroll) + 30 + 1 - e1 == 0 || Math.floor(scroll) + 30 + 1 - e1 == 1) {
+			if (Math.floor(scroll) + 30 + 1 - e1 === 0 || Math.floor(scroll) + 30 + 1 - e1 === 1) {
 				setState(0);
 			}
-			else if (Math.floor(scroll) + 30 + 1 - e2 == 0 || Math.floor(scroll) + 30 + 1 - e2 == 1) {
+			else if (Math.floor(scroll) + 30 + 1 - e2 === 0 || Math.floor(scroll) + 30 + 1 - e2 === 1) {
 				setState(1);
 
 			}
-			else if (Math.floor(scroll) + 30 + 1 - e3 == 0 || Math.floor(scroll) + 30 + 1 - e3 == 1) {
+			else if (Math.floor(scroll) + 30 + 1 - e3 === 0 || Math.floor(scroll) + 30 + 1 - e3 === 1) {
 				setState(2);
 			}
 			else {
@@ -70,18 +63,18 @@ export default function About() {
 				let e2 = e.target.children[1].offsetLeft;
 				let e3 = e.target.children[2].offsetLeft;
 				let e4 = e.target.children[3].offsetLeft;
-				if (e1 - 30 == scroll) {
+				if (e1 - 30 === scroll) {
 					setState(0);
 				}
-				else if (e2 - 30 == scroll) {
+				else if (e2 - 30 === scroll) {
 					setState(1);
 
 				}
-				else if (e3 - 30 == scroll) {
+				else if (e3 - 30 === scroll) {
 					setState(2);
 
 				}
-				else if (e4 - 97.4000244140625 == scroll) {
+				else if (e4 - 97.4000244140625 === scroll) {
 					setState(3);
 				}
 			});
