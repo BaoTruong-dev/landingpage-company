@@ -25,10 +25,11 @@ sagaMiddleware.run(rootSaga);
 store.dispatch({
     type: 'FETCH_SERVICE_DATA',
 });
-store.dispatch({
-    type: 'FETCH_POSTS_DATA',
-});
+
 store.dispatch({
     type: 'FETCH_INFO_DATA',
+});
+store.dispatch({
+    type: 'FETCH_POSTS_DATA',
 });
 export default store;

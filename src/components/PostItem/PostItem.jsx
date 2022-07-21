@@ -10,7 +10,7 @@ export default function PostItem({data,id}) {
     AOS.init({
       mirror:true,
       once: false,
-      duration: 500,
+      duration: 1200,
     });
     AOS.refresh();
     document.querySelectorAll('img').forEach((img)=>{
@@ -24,12 +24,12 @@ export default function PostItem({data,id}) {
 
   return (
     <li  >
-      <h2 data-aos="fade-up">
-        {id + 1}. {data.title}
-      </h2>
-      <p data-aos="fade-up">{data.content}</p>
+      {data.Title&&<h2 data-aos="fade-up">
+        {id + 1}. {data.Title}
+      </h2>}
+      <p data-aos="fade-up">{data.ContentDescription}</p>
 
-      <img src={data.image} alt={id} data-aos="fade-in"/>
+      <img src={data.Image} alt={id} data-aos="fade-up"/>
 
    
     </li>
