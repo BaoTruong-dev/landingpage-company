@@ -23,6 +23,8 @@ export default function HomeMenu() {
 
 		tl.current.reverse();
 		setTimeout(() => {
+			gsap.timeline().to("#root", { opacity: 0, duration: 0 });
+
 			navigate(`/detail/${path}`);
 		}, 2600);
 	};
@@ -78,7 +80,7 @@ export default function HomeMenu() {
 						<h2 className="title" ref={titleRef}>Lĩnh Vực</h2>
 						<div className="list-content" ref={listContentRef}>
 							{data?.map((e, index) => {
-								return <ServiceItem type={index % 2 == 0 ? true : false} key={index} content={e.CategoryDescription} src={`${API}/${e.Image}`} name={e.CategoryName} id={e.CategoryID} onClick={() => redirect(e.path)} />;
+								return <ServiceItem type={index % 2 == 0 ? true : false} key={index} content={e.CategoryDescription} src={`${API}/${e.Image}`} name={e.CategoryName} id={e.CategoryID} onClick={() => redirect(e.CategoryID)} />;
 
 							})}
 						</div>

@@ -1,9 +1,9 @@
-import { API_Posts} from '../constant/api';
+import { API } from "../constant/api";
+
 
 const servicePosts = {
-    getPostsData() {
-        return fetch(API_Posts).then(res => res.json());
-        // return fetch(API).then(res => res.json());
+    getPostsData(payload) {
+        return fetch(`${API}/category/details`).then(res => res.json());
     }
 };
 
