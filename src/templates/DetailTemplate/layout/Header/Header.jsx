@@ -9,7 +9,6 @@ import gsap from "gsap";
 export default function Header() {
 
 	const { detailID } = useParams();
-
 	//useRef, animation with gsap
 	const tl = useRef();
 	const menuLeftRef = useRef();
@@ -34,7 +33,7 @@ export default function Header() {
 		gsap.timeline().from(gsap.utils.selector(".social-list")(".social-icon"), 1, { x: "110%", opacity: 0, stagger: .5 });
 
 
-	}, [detailID]);
+	});
 
 
 	// animation when close page
@@ -69,7 +68,9 @@ export default function Header() {
 		}, 1800);
 	};
 	return (
-		<div className='header-template'>
+		<>
+	
+			<div className='header-template'>
 			<div className="header-menu">
 				<div className="menu-left" ref={menuLeftRef} onClick={handleClose}>
 
@@ -89,6 +90,8 @@ export default function Header() {
 
 			</div>
 		</div>
+	
+		</>
 
 	);
 }

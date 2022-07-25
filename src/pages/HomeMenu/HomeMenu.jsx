@@ -19,9 +19,8 @@ export default function HomeMenu() {
 		tl.current.reverse();
 		setTimeout(() => {
 			gsap.timeline().to("#root", { opacity: 0, duration: 0 });
-
 			navigate(`/detail/${path}`);
-		}, 2670);
+		}, 2500);
 	};
 	const handleRedirect = (path) => {
 		tl.current.reverse();

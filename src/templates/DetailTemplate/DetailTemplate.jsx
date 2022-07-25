@@ -3,15 +3,15 @@ import { useEffect,useState } from "react";
 import Header from "./layout/Header/Header";
 import Social from "./layout/Social/Social";
 import AOS from 'aos';
+import { useSelector } from "react-redux";
 export const DetailTemplate = (props) => {
 
-
-
-
+  const { data} =useSelector((store)=>store.posts);
+ 
   return (
     <>
-    
- <div className="container-detail">
+   {data.length>0&&(
+    <div className="container-detail">
  <div className="header-detail">
    <Header />
  </div>
@@ -22,6 +22,8 @@ export const DetailTemplate = (props) => {
    <Outlet />
  </div>
 </div>
+   )}
+ 
     
     </>
   );

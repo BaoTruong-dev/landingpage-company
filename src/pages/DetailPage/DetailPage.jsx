@@ -36,21 +36,21 @@ export default function DetailPage() {
 
     if (dataPost.CategoryID === detailID) {
 
-      setTimeout(() => {
-        gsap.timeline().to("#root", { opacity: 1 });
+      gsap.timeline().to("#root", { opacity: 1, duration: 0 });
 
-        gsap.timeline().from(wraperRef.current, { y: 450, opacity: 0, duration: 2 });
-        gsap.timeline().from(navRef.current, { y: "-100vh", opacity: 0, duration: 1 });
-        gsap.timeline().from(imageRef.current, { opacity: 0, duration: 0.5 });
+        gsap.timeline().from(wraperRef.current, { y: 450, opacity: 0, duration: 2 },"+=0.5");
+        gsap.timeline().from(navRef.current, { y: "-100vh", opacity: 0, duration: 1 },"+=0.5");
+        gsap.timeline().from(imageRef.current, { opacity: 0, duration: 0.5 },"+=0.5");
+        gsap.timeline().from(".navigation", { opacity: 0, duration: 0.5 },"+=0.5");
 
-      }, 300);
     }
-  }, [detailID]);
+  },[detailID]);
 
 
 
 
   useEffect(() => {
+    console.log("hihi")
     window.scrollTo(0, 0);
 
   });
@@ -85,12 +85,12 @@ export default function DetailPage() {
 
   //handle click next and previous page
   const handleClickNextPage = (pathNext) => {
-    gsap.timeline().to("#root", { opacity: 0, duration: 0 });
+    window.scrollTo(0, 0);
 
     navigate(`/detail/${pathNext}`);
   };
   const handleClickPreviousPage = (pathPrevious) => {
-    gsap.timeline().to("#root", { opacity: 0, duration: 0 });
+    window.scrollTo(0, 0);
 
     navigate(`/detail/${pathPrevious}`);
   };
@@ -98,7 +98,7 @@ export default function DetailPage() {
   return (
     <>
 
-      {dataPost && (
+      {data.length>0 && (
         <>
           <img
             src={dataPost.Model3D}
